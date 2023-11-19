@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Multimedia/background.jpg);
+    /* background-size: cover; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    /* border: 3px solid gold; */
+    width: 20vw;
+    position: relative;
+    top: -100px;
+    left: -100px;
+}
+h1{
+    color: #f7f6f6;
+    font-family: titan one;
+    font-size: 110px;
+    text-shadow: 0 0 100px #090808,
+    0 0 100px rgb(0, 0, 0);
+
+}
+.canvas{
+    display: flex;
+    flex-direction: column;
+}
+.score{
+    width: 620px;
+    height: 30px;
+    margin-bottom: 7.5px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.p{
+   display: inline;
+   margin: auto 15px;
+   /* font-weight: 800; */
+}
+.board{
+    background-image: linear-gradient(rgb(192, 213, 75), rgb(67, 189, 219));
+    width: 620px;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    box-shadow:  0 0 15px #f7f6f6;
+    border-radius: 8px;
+}
+.head{
+    background-color: rgb(0, 0, 0, 0.7);
+}
+.food{
+    background-image: linear-gradient(red,pink);
+    border-radius: 50%;
+    box-shadow:  0 0 15px #f7f6f6,
+    0 0 70px rgb(0, 0, 0);
+}
+.snakeBody{
+    background-color: green;
+    border-radius: 4px;
+}
+.upimg,.downimg,.leftimg,.rightimg{
+    width: 50px;
+    height: 50px;
+}
+.vertical{
+    position: relative;
+    top: -70px;
+    left: 97px;
+    display: flex;
+    flex-direction: column;
+}
+.horizontal{
+    position: relative;
+    top: -70px;
+    right: 45px;
+    display: flex;
+    flex-direction: row;
+}
+.up,.down{
+    margin: 30px 0px;
+    border-radius: 7px;
+    border: 2px solid white;
+}
+.left,.right{
+    margin: 0px 30px;
+    border-radius: 7px;
+    border: 2px solid white;
+}
+@media (max-width: 1400px) {
+    h1{
+        font-size: 65px;
+    }
+    .game{
+        left: 0px;
+    }
+    
+}
+
+@media (max-width: 1170px){
+    .game{
+        position: absolute;
+        width: 100vw;
+        top: 0px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .canvas{
+        margin-left: 124px;
+    }
+    .board{
+        width: 470px;
+    }
+    .score{
+        width: 470px;
+    }
+}
+@media (max-width: 800px){
+    .board{
+        width: 400px;
+    }
+    .score{
+        width: 400px;
+    }
+}
+@media (max-width: 700px){
+    .body{
+        flex-direction: column;
+    }
+    .canvas{
+        position: absolute;
+        margin: 0;
+        top: 70px;
+    }
+    .vertical{
+        position: relative;
+        top: 305px;
+        left: 6.5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .horizontal{
+        position: relative;
+        top: 159px;
+        left: 6.5px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (max-width: 450px){
+    h1{
+        font-size: 40px;
+    }
+    .board{
+        width: 92vw;
+    }
+    .score{
+        width: 92vw;
+    }
+    .vertical{
+        top: 250px;
+        
+    }
+    .horizontal{
+        top: 104px;
+       
+    }
+}
