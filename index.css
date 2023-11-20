@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url(Multimedia/background.jpg);
-    /* background-size: cover; */
+    background-size: cover;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
